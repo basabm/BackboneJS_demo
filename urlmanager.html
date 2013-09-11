@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>URL manager</title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/backbone-min.js"></script>
+<script src="js/backbone.localStorage.js"></script>
+<script type="text/html" id='urlList'>
+<div class="list"><li class="addfav"><%= urllist.linkurl %></li></div>
+</script>
+<link href="css/example.css" rel="stylesheet">
+<link href="css/stroll.css" rel="stylesheet">
+</head>
+<body>
+<header>
+  Backbone JS demo
+</header>
+<div class="main">
+<div id="urls">
+<div style="float:left;">
+<input type="text" id="input"/>
+<button class="button" id="add">Add</button>
+<br>
+<h2>URL List <br/>(Click url to add to favorite list)</h2>
+<ul class="helix" id="urllist"><li class="addfav">www.google.com</li><li class="addfav">www.yahoo.com</li><li class="addfav">www.aol.com</li><li class="addfav">www.ebay.com</li><li class="addfav">www.amazon.com</li><li class="addfav">www.facebook.com</li><li class="addfav">www.twitter.com</li><li class="addfav">www.gmail.com</li><li class="addfav">www.wikipedia.com</li><li class="addfav">www.qq.com</li><li class="addfav">www.taobao.com</li><li class="addfav">www.blogspot.com</li><li class="addfav">www.msn.com</li><li class="addfav">www.weibo.com</li><li class="addfav">www.blogger.com</li><li class="addfav">www.bbc.com</li><li class="addfav">www.youku.com</li><li class="addfav">www.flickr.com</li><li>www.avg.com</li class="addfav"><li class="addfav">www.ifeng.com</li></ul>
+</div>
+<div style="float:right;margin-right:50px;">
+<br/><br/>
+<h2>Favorite URL List <br/>(Click URL to delete)</h2>
+<ul class="helix" id="favoriteList">
+<ul>
+</div>
+</div>
+</div>
+<script src="js/stroll.min.js"></script>
+<script>
+  stroll.bind( '#urls ul' );
+</script>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<script src="backbone/models/url_model.js"></script>
+<script src="backbone/collections/url_collection.js"></script>
+<script src="backbone/views/url_view.js"></script>
+<script src="backbone/collections/localstorage.js"></script>
+</body>
+</html>
